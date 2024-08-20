@@ -4,8 +4,8 @@
   "description": "These is used for reactjs project",
   "scripts": {
     "test": "jtest",
-    "start": "rm -rf .parcel-cache && parcel",
-    "build": "rm -rf .parcel-cache && parcel build"
+    "start": "rm -rf .parcel-cache && parcel index.html",
+    "build": "rm -rf .parcel-cache && parcel build index.html"
   },
   "repository": {
     "type": "git",

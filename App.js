@@ -1,12 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("div", { id: "parent" },
-    [React.createElement("div", { id: "child" },
-        [React.createElement("h1", {}, "I am inside h1"), React.createElement("h2", {}, "I am inside h2")]
-    ),
-    React.createElement("div", { id: "child2" },
-        [React.createElement("h1", {}, "I am inside h1"), React.createElement("h2", {}, "I am inside h2")]
-    )]
-);
+
+const jsxheading = (<h1 id="heading">Namaste React using JSX
+    Namaste NodeJS
+    Namaste JavaScript</h1>);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(jsxheading);

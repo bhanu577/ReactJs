@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+const elm = <h1>I am a JSX Element</h1>;
+
+const Elm1 = function () {
+  return <h1>I am in function JSX Element</h1>;
+};
 const HeadingComponent = () => {
   return (
     <div id="container">
@@ -9,9 +14,11 @@ const HeadingComponent = () => {
   );
 };
 const Heading2Component = () => (
-    <div>
+  <div>
+    {elm}
     <h2>Hi Iam From Heading2Component</h2>
-    </div>
+    {Elm1()}
+  </div>
 );
 const JsxHeading = () => (
   <div>

@@ -1,33 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const elm = <h1>I am a JSX Element</h1>;
-
-const Elm1 = function () {
-  return <h1>I am in function JSX Element</h1>;
-};
-const HeadingComponent = () => {
+/*
+    -> Header
+        logo
+        Navigation
+    ->body
+        Search
+        Restuarnt Container
+        Resturant Card
+    -> Footer
+        Copyright
+        Address
+*/
+const Header = () => {
   return (
-    <div id="container">
-      <h1 className="heading">Namaste React using Functionl Component</h1>
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQFD5AmGuI6efSo6ZhAR2jtbrpeK0ImP2oQ&s" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
   );
 };
-const Heading2Component = () => (
-  <div>
-    {elm}
-    <h2>Hi Iam From Heading2Component</h2>
-    {Elm1()}
-  </div>
-);
-const JsxHeading = () => (
-  <div>
-    <h1 id="heading">
-      Namaste React using JSX Namaste NodeJS Namaste JavaScript
-    </h1>
-    <HeadingComponent />
-    <Heading2Component />
-  </div>
-);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<JsxHeading />);
+root.render(<AppLayout />);

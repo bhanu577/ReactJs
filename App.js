@@ -14,7 +14,7 @@ import ReactDOM from "react-dom/client";
 */
 const RestaurntCard = () => {
   return (
-    <div className="restroCard">
+    <div className="restroCard" style={{backgroundColor:"#f0f0f0"}}>
       <h3 className="restroName">PistaHouse</h3>
     </div>
   );
@@ -23,10 +23,8 @@ const RestaurntCard = () => {
 const MainBody = () => {
   return (
     <div className="body">
-      <div className="bodySearch">
-        <h3 className="search-field-item">Search</h3>
-      </div>
-      <RestaurntCard />
+      <div className="bodySearch">Search</div>
+      <div className="rest-Container"><RestaurntCard /></div>
     </div>
   );
 };

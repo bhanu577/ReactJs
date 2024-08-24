@@ -12,11 +12,32 @@ import ReactDOM from "react-dom/client";
         Copyright
         Address
 */
+const RestaurntCard = () => {
+  return (
+    <div className="restroCard">
+      <h3 className="restroName">PistaHouse</h3>
+    </div>
+  );
+};
+
+const MainBody = () => {
+  return (
+    <div className="body">
+      <div className="bodySearch">
+        <h3 className="search-field-item">Search</h3>
+      </div>
+      <RestaurntCard />
+    </div>
+  );
+};
 const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQFD5AmGuI6efSo6ZhAR2jtbrpeK0ImP2oQ&s" />
+        <img
+          className="logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQFD5AmGuI6efSo6ZhAR2jtbrpeK0ImP2oQ&s"
+        />
       </div>
       <div className="nav-items">
         <ul>
@@ -33,6 +54,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      <MainBody />
     </div>
   );
 };

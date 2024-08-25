@@ -22,10 +22,24 @@
   margin: 10px;
 }
 .restroCard {
-  width: 150px;
-  height: 250px;
+  margin: 3px;
+  width: 250px;
+  height: 400px;
+  padding: 5px;
+}
+.restroCard:hover {
+  cursor: pointer;
   border: 1px solid black;
 }
 .bodySearch {
   padding: 15px;
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 25px;
+}
+.rest-Container {
+  display: flex;
+  flex-wrap: wrap;
 }

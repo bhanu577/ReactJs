@@ -23,8 +23,7 @@
 }
 .restroCard {
   margin: 3px;
-  width: 250px;
-  height: 400px;
+  width: 200px;
   padding: 5px;
 }
 .restroCard:hover {
@@ -38,6 +37,7 @@
 .res-logo {
   width: 100%;
   border-radius: 25px;
+  height: 200px; 
 }
 .rest-Container {
   display: flex;

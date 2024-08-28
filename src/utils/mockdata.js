@@ -8,9 +8,9 @@ const resList = [
         areaName: "Vishnu Nagar",
         costForTwo: "₹400 for two",
         cuisines: ["North Indian", "South Indian", "Continental", "Beverages"],
-        avgRating: 4.3,
+        avgRating: 3.3,
         parentId: "26828",
-        avgRatingString: "4.3",
+        avgRatingString: "3.3",
         totalRatingsString: "500+",
         sla: {
           deliveryTime: 57,

@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 const RestaurntCard = (props) => {
-  const { resData } = props;
+  const { resData } = props; // Destructing the object arguments from pops that is being sent by the compenent
   const {
     cloudinaryImageId,
     name,

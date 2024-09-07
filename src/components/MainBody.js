@@ -21,7 +21,7 @@ const MainBody = () => {
       </div>
       <div className="rest-Container">
         {listRestaurnt.map((restaurnt, index) => (
-          <RestaurntCard key={restaurnt.info.id} resData={restaurnt} />
+          <RestaurntCard key={restaurnt.info.id} resData={restaurnt} /> //not using key is not acceptable either use key if back end send uniquie id(recommended) >> or else use index which is only used when backend does not sends (not recommended)
         ))}
       </div>
     </div>

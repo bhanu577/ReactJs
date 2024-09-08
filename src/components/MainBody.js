@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 const MainBody = () => {
   const [listRestaurnt, setListRestaurnt] = useState([]);
+  const [searchText, setSearchTest] = useState("");
+  const [searchfilteredData, setSearchFilteredData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -17,6 +19,9 @@ const MainBody = () => {
     setListRestaurnt(
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
+    setSearchFilteredData(
+      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    );
   };
   if (listRestaurnt.length === 0) {
     return <Shimmer />;
@@ -24,6 +29,26 @@ const MainBody = () => {
   return (
     <div className="body">
       <div className="filter-btn">
+        <input
+          className="input-body"
+          type="text"
+          value={searchText}
+          onChange={(e) => {
+            setSearchTest(e.target.value);
+          }}
+        ></input>
+        <button
+          onClick={() => {
+            const searchResult = listRestaurnt.filter((res) => {
+              return res.info.name
+                .toLowerCase()
+                .includes(searchText.toLowerCase());
+            });
+            setSearchFilteredData(searchResult);
+          }}
+        >
+          search
+        </button>
         <button
           className="top-rated"
           onClick={() => {
@@ -37,7 +62,7 @@ const MainBody = () => {
         </button>
       </div>
       <div className="rest-Container">
-        {listRestaurnt.map((restaurnt, index) => (
+        {searchfilteredData.map((restaurnt, index) => (
           <RestaurntCard key={restaurnt.info.id} resData={restaurnt} /> //not using key is not acceptable either use key if back end send uniquie id(recommended) >> or else use index which is only used when backend does not sends (not recommended)
         ))}
       </div>

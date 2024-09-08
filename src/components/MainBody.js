@@ -1,4 +1,5 @@
 import RestaurntCard from "./RestaurntCard";
+import Shimmer from "./shimmer";
 import { useState,useEffect } from "react";
 
 const MainBody = () => {
@@ -14,7 +15,7 @@ const MainBody = () => {
       setListRestaurnt(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   };
   if(listRestaurnt.length ===0){
-   return <h1>Loading...</h1>;
+   return <Shimmer/>
   }
   return (
     <div className="body">

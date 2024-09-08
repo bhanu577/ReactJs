@@ -1,9 +1,8 @@
 import RestaurntCard from "./RestaurntCard";
-import resList from "../utils/mockdata";
 import { useState,useEffect } from "react";
 
 const MainBody = () => {
-  const [listRestaurnt, setListRestaurnt] = useState(resList);
+  const [listRestaurnt, setListRestaurnt] = useState([]);
 
   useEffect(()=>{
     fetchData();
@@ -14,7 +13,9 @@ const MainBody = () => {
       const jsonData = await data.json();
       setListRestaurnt(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   };
-
+  if(listRestaurnt.length ===0){
+   return <h1>Loading...</h1>;
+  }
   return (
     <div className="body">
       <div className="filter-btn">

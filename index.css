@@ -37,23 +37,26 @@
 .res-logo {
   width: 100%;
   border-radius: 25px;
-  height: 200px; 
+  height: 200px;
 }
 .rest-Container {
   display: flex;
   flex-wrap: wrap;
 }
-.top-rated{
+.top-rated {
   margin: 10px;
   cursor: pointer;
 }
-.shimmer-container{
+.shimmer-container {
   display: flex;
   flex-wrap: wrap;
 }
-.shimmer-card{
+.shimmer-card {
   width: 200px;
   height: 400px;
   background-color: #f0f0f0;
-  margin:5px;
+  margin: 5px;
+}
+.login {
+  padding: 0px 20px;
 }
